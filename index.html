@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="triangle.js"></script>
+
+    <script src="uistuff.js"></script>
+
+</head>
+<body>
+    <h1>Triangles!</h1>
+    <div>
+        <label>row</label>
+        <select id="row" onchange="update">
+            <option value=0>A</option>
+            <option value=1>B</option>
+            <option value=2>C</option>
+            <option value=3>D</option>
+            <option value=4>E</option>
+            <option value=5>F</option>
+        </select>
+        <label>column</label>
+        <select id="col" onchange="update">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+        <button id="updateButton">Update</button>
+    </div>
+    <canvas id="tsquare" width="60px" height="60px" style="border: 1px solid black">
+    </canvas>
+    <script>
+        ready = () => {
+            console.log("READY")
+            document.getElementById('updateButton').onclick=update;
+            drawTriangle(getTriangleForPosition(A,1))
+        };
+        if ( document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
+            ready()
+        } else {
+            document.addEventListener('DOMContentLoaded', ready)
+        }
+
+    </script>
+
+</body>
+</html>
