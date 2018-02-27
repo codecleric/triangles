@@ -17,6 +17,11 @@ very simple.
 The original problem specified essentially a row major order 6 x 12 matrix, but
 the code works with any size; I can't help but generalize! 
 
+The original problem also stated this could be a C# Web API and the JS frontend
+was optional. Since I haven't written any significant C# since the PocketPC
+Windows Mobile days, and my daily driver is a Linux box, I chose to do the
+project completely in HTML/Javascript.
+
 
 ## Running the example
 
